@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: teal;
+  height: 10vh;
+  width: 100%;
+}
+
+.navbar i {
+  margin-right: 1rem;
+  color: aliceblue;
+}
+
+.navbar p {
+  font-weight: bold;
+}

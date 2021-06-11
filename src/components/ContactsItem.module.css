@@ -1,0 +1,49 @@
+.grid-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 0.7rem;
+  border: 1px dotted #444;
+  margin: 0.5rem 0.25rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* .card b {
+  float: right;
+} */
+
+.icons i {
+  margin-right: 0.25rem;
+}
+
+h4,
+p {
+  margin: 0.25em;
+}
+
+span {
+  color: teal;
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+
+.type {
+  color: #444;
+}
+
+ul {
+  list-style: none;
+}
+
+.card button {
+  padding: 0.33rem;
+  border-radius: 0.25rem;
+  color: teal;
+  margin: 0.5rem;
+}
