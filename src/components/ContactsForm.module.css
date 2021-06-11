@@ -25,6 +25,12 @@
   border-radius: 0.7rem;
 }
 
+.ContactsForm button:hover {
+  color: whitesmoke;
+  background-color: cadetblue;
+  border: 2px black solid;
+}
+
 .ContactsForm b {
   color: teal;
   margin-bottom: 0.25rem;

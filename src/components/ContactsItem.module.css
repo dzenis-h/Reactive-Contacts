@@ -7,16 +7,12 @@
   padding: 0.7rem;
   border: 1px dotted #444;
   margin: 0.5rem 0.25rem;
-  width: 75%;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
 }
-
-/* .card b {
-  float: right;
-} */
 
 .icons i {
   margin-right: 0.25rem;
@@ -46,4 +42,10 @@ ul {
   border-radius: 0.25rem;
   color: teal;
   margin: 0.5rem;
+}
+
+.card button:hover {
+  color: whitesmoke;
+  background-color: cadetblue;
+  border: 2px black solid;
 }
