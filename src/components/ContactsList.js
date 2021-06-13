@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ContactContxt } from '../store/contacts-context';
+import { AuthContext } from '../store/auth-context';
 import ContactsItem from './ContactsItem';
 
 const ContactsList = () => {
-  const { contacts } = useContext(ContactContxt);
+  const { contacts, getContacts } = useContext(ContactContxt);
+  const { isAuth } = useContext(AuthContext);
 
-  const list = contacts.map((c) => <ContactsItem contact={c} key={c.id} />);
+  useEffect(() => {
+    if (isAuth) getContacts();
+  }, [isAuth, getContacts]);
+
+  const list = contacts.map((c) => <ContactsItem contact={c} key={c._id} />);
 
   return <div>{list}</div>;
 };

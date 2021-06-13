@@ -2,10 +2,10 @@ import React, { Fragment, useContext, useState } from 'react';
 import classes from './ContactsItem.module.css';
 import { ContactContxt } from '../store/contacts-context';
 
-const ContactsItem = ({ contact: { name, phone, email, type, id } }) => {
+const ContactsItem = ({ contact: { name, phone, email, type, _id } }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState({
-    id,
+    _id,
     name,
     email,
     phone,
@@ -56,7 +56,7 @@ const ContactsItem = ({ contact: { name, phone, email, type, id } }) => {
             )}
           </li>
           <li>
-            <i class="far fa-address-card" /> Type:{' '}
+            <i className="far fa-address-card" /> Type:{' '}
             <b className={classes.type}>{type}</b> <br />
             {isEditing && (
               <Fragment>
@@ -84,11 +84,11 @@ const ContactsItem = ({ contact: { name, phone, email, type, id } }) => {
 
           {!isEditing ? (
             <li>
-              <button onClick={() => deleteFn(id)}>DELETE</button>
+              <button onClick={() => deleteFn(_id)}>DELETE</button>
               <button onClick={() => setIsEditing(true)}>EDIT</button>
             </li>
           ) : (
-            <button onClick={() => editFn(id, value)}>Update</button>
+            <button onClick={() => editFn(_id, value)}>Update</button>
           )}
         </ul>
       </div>

@@ -7,11 +7,12 @@
   padding: 0.7rem;
   border: 1px dotted #444;
   margin: 0.5rem 0.25rem;
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+  background-color: whitesmoke;
 }
 
 .icons i {
@@ -42,10 +43,17 @@ ul {
   border-radius: 0.25rem;
   color: teal;
   margin: 0.5rem;
+  background-color: white;
 }
 
 .card button:hover {
   color: whitesmoke;
   background-color: cadetblue;
   border: 2px black solid;
+}
+
+.card input {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.2rem;
 }

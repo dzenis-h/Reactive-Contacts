@@ -1,0 +1,34 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.register input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 33%;
+}
+
+.register label {
+  font-weight: bold;
+  color: teal;
+}
+
+.register button {
+  margin-top: 1rem;
+  padding: 0.65rem;
+  width: 35%;
+  border-radius: 0.7rem;
+}
+
+.register button:hover {
+  color: whitesmoke;
+  background-color: cadetblue;
+  border: 2px black solid;
+}
+.register h4 {
+  margin-top: 1rem;
+}
