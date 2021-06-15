@@ -4,20 +4,26 @@ import {
   REMOVE_CONTACT,
   UPDATE_CONTACT,
   GET_CONTACTS,
+  FILTER_CONTACTS,
+  CLEAR_FILTER,
 } from './types';
 import axios from 'axios';
 import setToken from '../utils/setToken';
 
 export const ContactContxt = createContext({
   contacts: [],
+  filtered: [],
   addContect: (contact) => {},
   removeContact: (id) => {},
   updateContact: (id, newData) => {},
   getContacts: () => {},
+  filterContacts: (text) => {},
+  clearFiltered: () => {},
 });
 
 const initialState = {
   contacts: [],
+  filtered: null,
 };
 
 const reducerFn = (state = initialState, action) => {
@@ -52,6 +58,21 @@ const reducerFn = (state = initialState, action) => {
       return {
         ...state,
         contacts: updatedItems,
+      };
+    case FILTER_CONTACTS:
+      const filteredContacts = state.contacts.filter((contact) => {
+        console.log(action.payload);
+        const regex = new RegExp(`${action.payload}`, 'gi');
+        return contact.name.match(regex) || contact.email.match(regex);
+      });
+      return {
+        ...state,
+        filtered: filteredContacts,
+      };
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        filtered: null,
       };
 
     default:
@@ -90,12 +111,23 @@ export const ContactProvider = (props) => {
     dispatch({ type: UPDATE_CONTACT, payload: { id, newData } });
   };
 
+  const filterContacts = (text) => {
+    dispatch({ type: FILTER_CONTACTS, payload: text });
+  };
+
+  const clearFiltered = useCallback(() => {
+    dispatch({ type: CLEAR_FILTER });
+  }, []);
+
   const ctx = {
     contacts: state.contacts,
+    filtered: state.filtered,
     addContect,
     removeContact,
     updateContact,
     getContacts,
+    filterContacts,
+    clearFiltered,
   };
 
   return (

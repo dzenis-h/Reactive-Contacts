@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 0.5rem;
+  color: teal;
+  font-weight: bold;
+}
+
+.list input {
+  width: 75%;
+  align-self: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem;
+}
+
+.list label {
+  align-self: center;
+}

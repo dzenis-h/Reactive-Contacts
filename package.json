@@ -1,0 +1,20 @@
+{
+  "name": "reactive-contacts",
+  "version": "1.0.0",
+  "description": "Starting script",
+  "main": "index.js",
+  "author": "Dzenis H.",
+  "license": "ISC",
+  "scripts": {
+    "server": "nodemon  server.js --prefix backend",
+    "client": "npm start --prefix frontend",
+    "client-install": "npm install --prefix frontend",
+    "backend-install": "npm install --prefix backend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"cd backend && npm run server\" \"cd frontend && npm start\" "
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
