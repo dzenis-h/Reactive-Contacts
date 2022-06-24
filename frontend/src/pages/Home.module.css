@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 800px) {
   .Home {
     grid-template-columns: repeat(1, 1fr);
   }
