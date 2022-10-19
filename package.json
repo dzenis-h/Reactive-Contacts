@@ -1,17 +1,33 @@
 {
-  "name": "reactive-contacts",
-  "version": "1.0.0",
-  "description": "Starting script",
-  "main": "index.js",
-  "author": "Dzenis H.",
-  "license": "ISC",
+  "name": "reactive-contact",
+  "version": "2.0.0",
+  "description": "Contacts manager app",
+  "main": "server.js",
   "scripts": {
+<<<<<<< HEAD
     "server": "nodemon  server.js --prefix backend",
     "client": "npm start --prefix frontend",
     "client-install": "npm install --prefix frontend",
     "backend-install": "npm install --prefix backend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm start\" "
+=======
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.5"
+>>>>>>> 692cdbcf6ec282e1148b1a5d416285f2d2946229
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
