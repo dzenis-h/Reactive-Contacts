@@ -26,6 +26,6 @@ Contributions are always welcome! If you would like to contribute to this projec
 This project is licensed under the MIT License. For more information, please see the [license file](https://docs.google.com/document/d/11WK7tVoTFRMcWCuGZQCRWxEsDUEJ_6ArtfV-NjWcBCU/edit?usp=sharing).
 
 ## Credits 👏
-Reactive-Contacts was created by Dzenis H. (https://www.dzenis.tech)
+Reactive-Contacts was created by [Dzenis H.](https://www.dzenis.tech)
 
 If you like what you see, please consider giving a ⭐️
